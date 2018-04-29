@@ -1,0 +1,8 @@
+{
+  "name": "Lpu-Hub-Space",
+  "app_id": "79fb940c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

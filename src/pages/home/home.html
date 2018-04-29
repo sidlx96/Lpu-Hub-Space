@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button menuToggle ion-button icon-only>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title  ><h1 style="font-weight: bold; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">FoodFeed</h1></ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let shop of shops | async;">
+  
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{shop.shopImage}}">
+        </ion-avatar>
+        <h2>{{shop.shopName}}</h2>
+        <p>{{shop.shopLocation}}</p>
+      </ion-item>
+    
+      <img src="{{shop.shopImage}}">
+    
+      <ion-card-content>
+        <p>{{shop.shopSignatureDishes}}</p>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <button  (click)="viewPage(shop)">
+            View More
+          </button>
+        </ion-col>
+      </ion-row>
+    
+    </ion-card>
+  
+</ion-content>
+<style>
+	.social-cards ion-col {
+	  padding: 0;
+	}
+  </style>
